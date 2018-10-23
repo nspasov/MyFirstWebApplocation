@@ -33,7 +33,7 @@ namespace MyFirstWebApplication.Pages
                 _db.Customers.Remove(customer);
                 await _db.SaveChangesAsync();
             }
-            //
+
             return RedirectToPage();
         }
     }
