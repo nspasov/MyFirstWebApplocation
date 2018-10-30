@@ -19,6 +19,9 @@ namespace MyFirstWebApplication.Pages
 
         public IList<Customer> Customers { get; set; }
 
+        [TempData]
+        public string Message { get; set; }
+
         public async Task OnGetAsync()
         {
             Customers = await _db.Customers.AsNoTracking().ToListAsync();
